@@ -73,7 +73,11 @@
 	if(!material_amount)
 		to_chat(user, "<span class='warning'>[I] does not contain sufficient materials to be accepted by [parent].</span>")
 		return
+<<<<<<< HEAD
 	if(!has_space(material_amount))
+=======
+	if((!precise_insertion || !GLOB.typecache_stack[I.type]) && !has_space(material_amount))
+>>>>>>> f3af445c94... Update material_container.dm (#12491)
 		to_chat(user, "<span class='warning'>[parent] has not enough space. Please remove materials from [parent] in order to insert more.</span>")
 		return
 	user_insert(I, user)
